@@ -3,9 +3,11 @@ module.exports = () => {
 	const Schema       = mongoose.Schema;
 
 	var congressistas  = new Schema({
-		nome	  : String,
-		sobrenome : String,
-		cadastro  : {type: Date, default: Date.now}
+		nome	     : String,
+		sobrenome    : String,
+		pontuacao    : Number,
+		numeroTweets : Number,
+		cadastro     : {type: Date, default: Date.now}
 	});
 
 	return mongoose.model('congressistas', congressistas);
